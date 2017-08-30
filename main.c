@@ -3,24 +3,23 @@
 */
 
 #include <stdio.h>
+#include <math.h>
+
 
 int main(void)
 {
+    int a,b,c;
+    int sum;
     int retry;
 
-    do
-    {
-        int a;
-        printf("please enter a number:\n");
-        scanf("%d",&a);
-        if (a ==0)
-            puts("the number is 0");
-        else if (a<0)
-            puts("the number is xiaoyu 0");
-        else
-            puts("the number is dayu 0");
-        printf("retry it? yes...1,no...0");
+    do {
+        printf("please enter two number:");
+        scanf("%d%d",&a,&b);
+        c= abs(a - b);/*abs是绝对值*/
+        sum=(a+b)*(c+1)/2;
+        printf("the sum is:%d",sum);
+        printf("retry?Yes...0,No...9");
         scanf("%d",&retry);
-    }while(retry==1);
+    }while(retry==0);
         return 0;
 }
