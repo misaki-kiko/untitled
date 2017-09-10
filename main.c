@@ -9,15 +9,17 @@
 int main(void)
 {
     int a,b;
+    int i=1;
 
-    printf("输入一个整数：");
+    printf("请输入一个整数：");
     scanf("%d",&a);
 
-    b=0;
-    while (b<a)
-    {putchar('*');
-    putchar('\n');
-        b+=1;
+    while(i<a)
+    {
+        b=a%10;
+        a/=10;
+        i+=1;
     }
+    printf("%d",i);
     return 0;
 }
