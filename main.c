@@ -8,20 +8,16 @@
 
 int main(void)
 {
-   int a,b;
+    int a,b;
 
-    printf("请输入一个整数:");
+    printf("输入一个整数：");
     scanf("%d",&a);
 
     b=0;
-    while (a>b)
-    {
-        putchar('+');
-        b+=1;
-        if (b<a){
-        putchar('-');}
+    while (b<a)
+    {putchar('*');
+    putchar('\n');
         b+=1;
     }
-
     return 0;
 }
