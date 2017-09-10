@@ -8,18 +8,18 @@
 
 int main(void)
 {
-    int a,b;
-    int i=1;
+    int num,sum;
+    int i;
 
-    printf("请输入一个整数：");
-    scanf("%d",&a);
+    printf("请输入一个正整数：");
+    scanf("%d",&num);
 
-    while(i<a)
+    sum=0;
+
+    for(i=1;i<=num;i++)
     {
-        b=a%10;
-        a/=10;
-        i+=1;
+        sum=sum+i;
     }
-    printf("%d",i);
+    printf("和为%d",sum);
     return 0;
 }
