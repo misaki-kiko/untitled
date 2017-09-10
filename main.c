@@ -1,5 +1,5 @@
 /*
-	êÆêîÇ∆ïÇìÆè¨êîì_êîÇèëéÆâªÇµÇƒï\é¶
+    练习用／2017 misaki_kiko
 */
 
 #include <stdio.h>
@@ -8,18 +8,20 @@
 
 int main(void)
 {
-    int a,b,c;
-    int sum;
-    int retry;
+   int a,b;
 
-    do {
-        printf("please enter two number:");
-        scanf("%d%d",&a,&b);
-        c= abs(a - b);/*abs是绝对值*/
-        sum=(a+b)*(c+1)/2;
-        printf("the sum is:%d",sum);
-        printf("retry?Yes...0,No...9");
-        scanf("%d",&retry);
-    }while(retry==0);
-        return 0;
+    printf("请输入一个整数:");
+    scanf("%d",&a);
+
+    b=0;
+    while (a>b)
+    {
+        putchar('+');
+        b+=1;
+        if (b<a){
+        putchar('-');}
+        b+=1;
+    }
+
+    return 0;
 }
