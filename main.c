@@ -8,21 +8,25 @@
 
 int main(void)
 {
-    int i,n;
-    int h=0;
-
-    printf("整数值：");
-    scanf("%d",&n);
-
-    for (i=1;i<=n; i++)
+    int i,j;
+    int n;
+    printf(" |");
+    for (n=1;n<=9;n++)
     {
-        if (n%i == 0)
-        {
-            printf("%d ", i);
-            h++;
-        }
+        printf("%3d",n);
     }
-    putchar('\n');
-    printf("约数有%d个。",h);
+    printf("\n------------------------------");
+    printf("\n");
+    for (i=1;i<=9;i++)
+    {
+        printf("%d",i);
+        printf("|");
+        for (j=1;j<=9;j++){
+            printf("%3d",i*j);}
+        putchar('\n');
+
+    }
     return 0;
 }
+
+//我感觉这一段肯定有什么迷一样的错误。。。。。
