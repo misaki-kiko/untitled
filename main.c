@@ -8,17 +8,15 @@
 
 int main(void)
 {
-   int a,b;
-    int i;
+    int num,i;
 
-    printf("请输入一个整数：");
-    scanf("%d",&a);
+    printf("n的值：");
+    scanf("%d",&num);
 
-    for (i=0;i<=a;i++)
+    for (i=1;i<=num;i++)
     {
-        if(i%2>0)
-            printf("%d ",i);
+       printf("%d的二次方是%d",i,i*i);
+        putchar('\n');
     }
-
     return 0;
 }
