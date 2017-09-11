@@ -8,13 +8,16 @@
 
 int main(void)
 {
-  int a,b;
+   int a,b;
+    int i;
 
+    printf("请输入一个整数：");
     scanf("%d",&a);
 
-    for (b=0;b<a;b++)
+    for (i=0;i<=a;i++)
     {
-        printf("%d",b%10+1);
+        if(i%2>0)
+            printf("%d ",i);
     }
 
     return 0;
