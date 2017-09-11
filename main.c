@@ -8,17 +8,21 @@
 
 int main(void)
 {
-    int num;
-    int i;
+    int i,n;
+    int h=0;
 
-    printf("显示多少个*？：");
-    scanf("%d",&num);
+    printf("整数值：");
+    scanf("%d",&n);
 
-    for (i=1;i<=num;i++)
+    for (i=1;i<=n; i++)
     {
-        putchar('*');
-        if (i%5==0)
-            putchar('\n');
+        if (n%i == 0)
+        {
+            printf("%d ", i);
+            h++;
+        }
     }
+    putchar('\n');
+    printf("约数有%d个。",h);
     return 0;
 }
