@@ -1,26 +1,29 @@
 /*
     练习用／2017 misaki_kiko
+    练习4-23第二部分 显示出直角在右上方的等腰三角形。
 */
 
 #include <stdio.h>
-#include <math.h>
 
+int main() {
+    int width = 0;
 
-int main(void)
-{
-    int i,j,len;
+    printf("输入一个正整数：");
+    scanf("%d",&width);
 
-    puts("生成直角在左上方的等腰直角三角形");
-    printf("短边：");
-    scanf("%d",&len);
+    for (int i = 0; i < width; ++i) {
+        int num_of_space = i;
+        int num_of_star  = width - i;
 
-    for (i=len;i>=1;i --)
-    {
-        for (j=i;j>=1;j--)
+        for (int j = 0; j < num_of_space; ++j) {
+            putchar(' ');
+        }
+
+        for (int j = 0; j < num_of_star; ++j) {
             putchar('*');
-        printf("\n");
-    }
+        }
 
+        putchar('\n');
+    }
     return 0;
 }
-
