@@ -9,18 +9,26 @@
 int main(void)
 {
     int i,j;
-    int n;
+    int m=0,n=0;
+    int c,d;
 
-    printf("正方形有几层？：");
-    scanf("%d",&n);
+    printf("一边：");
+    scanf("%d",&i);
+    printf("另一边：");
+    scanf("%d",&j);
 
-    for (i=1;i<=n;i++)
+    if (i>j)
     {
-        putchar('*');
-        for (j=2;j<=n;j++)
-        {
+        m=i;
+        n=j;
+        i=j;
+        j=m;
+    }
+
+    for (c=1;c<=i;c++)
+    {
+        for (d=1;d<=j;d++)
             putchar('*');
-        }
         putchar('\n');
     }
     return 0;
