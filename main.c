@@ -8,29 +8,19 @@
 
 int main(void)
 {
-    int i,j;
-    int m=0,n=0;
-    int c,d;
+    int i,j,len;
 
-    printf("一边：");
-    scanf("%d",&i);
-    printf("另一边：");
-    scanf("%d",&j);
+    puts("生成直角在左上方的等腰直角三角形");
+    printf("短边：");
+    scanf("%d",&len);
 
-    if (i>j)
+    for (i=len;i>=1;i --)
     {
-        m=i;
-        n=j;
-        i=j;
-        j=m;
-    }
-
-    for (c=1;c<=i;c++)
-    {
-        for (d=1;d<=j;d++)
+        for (j=i;j>=1;j--)
             putchar('*');
-        putchar('\n');
+        printf("\n");
     }
+
     return 0;
 }
 
