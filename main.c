@@ -4,26 +4,25 @@
 
 #include <stdio.h>
 
-#include <stdio.h>
-
-int main()
-{
+int main() {
     int count;
-    scanf("%d",&count);
-    for (int i=0;i<count; ++i)
-    {
-        int num_of_space= count - i;
-        int num_of_star=i*2+1;
-        for (int j=0;j< num_of_space;++j)
-        {
+
+    printf("请输入一个整数：");
+    scanf("%d", &count);
+
+    for (int i = 1; i <= count; i++) {
+        int count_num =(count-i)*2+1;
+        int count_space = i - 1;
+
+        for (int k = 0; k < count_space; ++k) {
             putchar(' ');
         }
 
-        for (int j=0; j<num_of_star;++j)
-        {
-            putchar('*');
+        for (int j = count_num; j > 0; j--) {
+            printf("%d", i%10);
         }
 
         putchar('\n');
     }
+    return 0;
 }
