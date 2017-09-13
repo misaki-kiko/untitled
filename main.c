@@ -6,10 +6,16 @@
 
 int main(void) {
     int i;
-    int v[5]={5,4,3,2,1};
+    int a[5]={17,23,36};
+    int b[5];
 
     for (i=0;i<5;i++)
-        printf("v[%d]=%d\n",i,v[i]);
+        b[i]=a[4-i];
+
+    puts("  a    b");
+    puts("=========");
+    for (i=0;i<5;i++)
+        printf("%4d%4d\n",a[i],b[i]);
 
     return 0;
 }
