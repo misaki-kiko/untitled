@@ -4,25 +4,14 @@
 
 #include <stdio.h>
 
-int main() {
-    int count;
+int main(void) {
+    int i;
+    int v[5];
 
-    printf("请输入一个整数：");
-    scanf("%d", &count);
+    for (i=0;i<5;i++)
+        v[i] = i;
 
-    for (int i = 1; i <= count; i++) {
-        int count_num =(count-i)*2+1;
-        int count_space = i - 1;
-
-        for (int k = 0; k < count_space; ++k) {
-            putchar(' ');
-        }
-
-        for (int j = count_num; j > 0; j--) {
-            printf("%d", i%10);
-        }
-
-        putchar('\n');
-    }
+    for (i=0;i<5;i++)
+        printf("v[%d]=%d\n",i,v[i]);
     return 0;
 }
