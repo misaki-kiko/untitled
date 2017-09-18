@@ -3,44 +3,30 @@
 */
 
 #include <stdio.h>
-#define NUMBER 80
+#define NUMBER 1000
 int main(void) {
-    int i,j;
     int num;
-    int tensu[NUMBER];
-    int bunpu[11]={0};
+    int m;
+    int x[m];
 
-    printf("请输入学生人数：");
-    do {
+    printf("数据个数：");
+    do
+    {
         scanf("%d",&num);
-        if (num<1 ||num >NUMBER)
-            printf("\a请输入1～%d的数：",NUMBER);
-    }while (num <1 || num>NUMBER);
-    printf("请输入%d人的分数。\n",num);
+        if (num<0||num>NUMBER)
+        printf("请输入1～1000的数字：");
+    } while(num<0||num>NUMBER);
 
-    for (i = 0; i < num; ++i) {
-        printf("%2d号:",i+1);
-        do{
-            scanf("%d",&tensu[i]);
-            if (tensu[i]<0 || tensu[i]>100)
-                printf("\a请输入1～100的数：");
-        }while (tensu[i]<0 || tensu[i]>100);
-        bunpu[tensu[i]/10]++;
+    for (int i = 0; i <num ; ++i) {
+        printf("%2d号：",i+1);
+            scanf("%d",&x[i]);
     }
-    puts("\n---分布图---");
-
-    for (int i = 0; i <=9; i++) {
-        printf("%3d-%3d:",i*10,i*10+9);
-        for (int j = 0; j <bunpu[i] ; ++j) {
-            putchar('*');
-        }
-        putchar('\n');
+    printf("{");
+    for (int j = 0; j <num ; ++j) {
+        printf("%d",x[j]);
+        if (j != num - 1)
+        printf(",");
     }
-    printf("100:");
-
-    for (int j = 0; j <bunpu[10] ; ++j) {
-        putchar('*');
-        putchar('\n');
-    }
+    printf("}");
     return 0;
 }
